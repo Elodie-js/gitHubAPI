@@ -9,6 +9,8 @@ import 'semantic-ui-css/semantic.min.css'
 import './styles.scss';
 import Header from '../Header';
 import Repos from '../Repos';
+//import my data 
+import data from 'src/data/repos'
 
 // == Composant
 const App = () => (
@@ -18,7 +20,8 @@ const App = () => (
   onInputChange={() => {}}
   onFormSubmit={() => {}} /> 
   <Message content="Je suis un message" />
-  <Repos /> 
+  {/* My repos need my data, and they need items from the data file */}
+  <Repos list={data.items} /> 
   </div>
 );
 
