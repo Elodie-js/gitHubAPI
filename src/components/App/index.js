@@ -6,7 +6,7 @@ import { Message } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css'
 
 // == Import of style and my component 
-import './styles.css';
+import './styles.scss';
 import Header from '../Header';
 import Repos from '../Repos';
 
