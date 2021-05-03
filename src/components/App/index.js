@@ -13,7 +13,10 @@ import Repos from '../Repos';
 // == Composant
 const App = () => (
   <div className="app">
-  <Header /> 
+  <Header
+  inputValue="mon texte"
+  onInputChange={() => {}}
+  onFormSubmit={() => {}} /> 
   <Message content="Je suis un message" />
   <Repos /> 
   </div>
