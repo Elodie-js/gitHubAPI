@@ -1,5 +1,5 @@
 // == Import npm
-import React from 'react';
+import React, {useState } from 'react';
 // using message from semantic ui 
 import { Message } from 'semantic-ui-react';
 // import of semantic ui for CSS 
@@ -13,17 +13,39 @@ import Repos from '../Repos';
 import data from 'src/data/repos'
 
 // == Composant
-const App = () => (
+const App = () => {
+
+  // state for stock up my list 
+  const [repos, setRepos] = useState([data.items]);
+
+  // i want to have in sotkc my input, and i want the "method" to change him.
+  const [inputText, setInputText] = useState('');
+
+  // i want to change this input text 
+  const handleInputChange = (textSaisi) => {
+    setInputText(textSaisi);
+  };  
+  
+  // when i Submit 
+  const handleFormSubmit= () => 
+  {}; 
+
+
+
+
+return (
   <div className="app">
   <Header
-  inputValue="mon texte"
-  onInputChange={() => {}}
-  onFormSubmit={() => {}} /> 
+  inputValue={inputText}
+  onInputChange={handleInputChange}
+  onFormSubmit={handleFormSubmit}/> 
   <Message content="Je suis un message" />
   {/* My repos need my data, and they need items from the data file */}
-  <Repos list={data.items} /> 
+  <Repos list={repos} /> 
   </div>
 );
+
+}
 
 // == Export
 export default App;
