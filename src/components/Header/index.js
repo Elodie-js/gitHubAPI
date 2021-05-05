@@ -11,7 +11,7 @@ import {Segment, Input} from 'semantic-ui-react';
 // onInputChange: fonction pour ecouter le change / a executer lors du changement
 // onFormSubmit au submit je dois executer la fonction 
 //  
-const Header = ( {inputValue, onInputChange, onFormSubmit  }) =>  (
+const Header = ( {inputValue, onInputChange, onFormSubmit, loading  }) =>  (
 <header className="header">
   <img src={gitHubImg} alt="logo github" className="header__logo" />
 
@@ -26,6 +26,7 @@ const Header = ( {inputValue, onInputChange, onFormSubmit  }) =>  (
   }}> 
     <Input 
     fluid 
+    loading={loading}
     icon="search"
     iconPosition="left" 
     className="header__input"
@@ -44,6 +45,7 @@ const Header = ( {inputValue, onInputChange, onFormSubmit  }) =>  (
 );
 
 Header.propTypes = {
+  loading: PropTypes.bool.isRequired,
   inputValue: PropTypes.string.isRequired,
   onInputChange: PropTypes.func.isRequired,
   onFormSubmit: PropTypes.func.isRequired,

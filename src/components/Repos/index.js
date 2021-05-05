@@ -40,13 +40,13 @@ Repos.propTypes = {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       description: PropTypes.string,
-      fullName: PropTypes.string.isRequired,
+     // fullName: PropTypes.string.isRequired,
       owner: PropTypes.shape ({
-        login: PropTypes.string.isRequired,
-        avatar: PropTypes.string.isRequired,
+        login: PropTypes.string,
+        avatar_url: PropTypes.string,
 
-      })
-    })
+      }),
+    }),
   ).isRequired,
 
 }
